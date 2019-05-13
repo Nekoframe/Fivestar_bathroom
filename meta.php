@@ -11,6 +11,16 @@
 
     <title><?php echo $title; ?></title>
 
+    <!-- Google recaptcha -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('captcha', {
+          'sitekey' : '6LeQFkIUAAAAAIXZlEPnxuC65laVDcNlW4lFHdsr'
+        });
+      };
+    </script>
+
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">

@@ -10,6 +10,7 @@
 
 <main class="main--space-top">
 
+	<!-- landing__service -->
 	<div class="container landing__service">
 		<div class="row">
 			<div class="col-lg-8">
@@ -150,6 +151,7 @@
 		</ul>
 		<!-- end service__list -->
 	</div>
+	<!-- end landing__service -->
 
 	
 

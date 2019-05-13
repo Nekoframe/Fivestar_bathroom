@@ -162,11 +162,6 @@
 	    var number = $(this).find('.number').text();
 	    return parseInt( number, 10 ) > 50;
 	  },
-	  // show if name ends with -ium
-	  /*ium: function() {
-	    var name = $(this).find('.name').text();
-	    return name.match( /ium$/ );
-	  }*/
 	};
 
 
@@ -197,6 +192,10 @@
 	  filterValue = filterFns[ filterValue ] || filterValue;
 	  $grid.isotope({ filter: filterValue });
 	});
+</script>
+
+<!-- Google reCaptcha -->
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
 </script>
 
   </body>

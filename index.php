@@ -73,7 +73,7 @@ qui dolorem ipsum quia dolor sit amet, consectetu</p>
 				<div class="col-md-6 col-lg-4">
 					<a href="#!" class="gallery__image" data-toggle="modal" data-target="#gallery">
 						<div class="gallery__caption">
-							<h3>Cozy Bahtrooms</h3>
+							<h3>Cozy Bathrooms</h3>
 						</div>
 						<div class="gallery--image-into-bg" style="background-image: url(img/galleries/category2.jpg);"></div>
 					</a>

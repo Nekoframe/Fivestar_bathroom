@@ -217,7 +217,7 @@ footer {
   transform: translate(-50%, -50%); }
 
 .testimonial {
-  height: 100vh;
+  height: auto;
   padding-top: 80px;
   padding-bottom: 80px;
   background-image: url("../img/testimonial_bg2.jpg");
@@ -528,7 +528,8 @@ footer {
     line-height: 1.5rem; }
   .landing__service .service__icon {
     margin-top: 3rem;
-    text-align: center; }
+    text-align: left;
+    margin-left: 5rem; }
     .landing__service .service__icon .icon {
       display: inline-block;
       width: 60px;
@@ -574,6 +575,38 @@ footer {
     .landing__service .service__list .service__detail {
       margin-top: 40px; }
 
+.landing__contact {
+  background-color: #496480;
+  padding-top: 100px;
+  color: #ffffff; }
+  .landing__contact .contact__headline {
+    font-size: 3.9375rem;
+    font-weight: bold;
+    line-height: 4rem;
+    margin-bottom: 60px; }
+  .landing__contact address {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem; }
+  .landing__contact p {
+    margin-bottom: 0.5rem; }
+    .landing__contact p a {
+      color: #ffffff;
+      text-decoration: none; }
+      .landing__contact p a:hover {
+        color: rgba(255, 255, 255, 0.6); }
+  .landing__contact .contact__form {
+    margin-bottom: 40px;
+    margin-top: 40px; }
+  .landing__contact .contact__captcha {
+    height: 140px; }
+    .landing__contact .contact__captcha .captcha {
+      float: right;
+      margin-top: 37px; }
+  .landing__contact hr {
+    border-top: solid 1px #ffffff; }
+  .landing__contact .contact__button {
+    text-align: right; }
+
 @media (min-width: 768px) {
   .banner .banner__text h1 {
     font-size: 5.938rem; }
@@ -584,7 +617,12 @@ footer {
     height: 24rem; }
 
   .testimonial .testimonial__card {
-    height: 460px; } }
+    height: 460px; }
+
+  .landing__contact .contact__headline {
+    font-size: 5.9375rem;
+    line-height: 5.7rem;
+    margin-bottom: 60px; } }
 @media (min-width: 992px) {
   header .mobile__menu-box {
     background-color: transparent; }
@@ -603,8 +641,10 @@ footer {
   .galleries .gallery--see-more-box {
     height: 21rem; }
 
-  .testimonial .testimonial__card {
-    height: 510px; }
+  .testimonial {
+    height: 100vh; }
+    .testimonial .testimonial__card {
+      height: 510px; }
 
   .landing__service .service__image {
     margin-top: 0px; }
@@ -625,7 +665,15 @@ footer {
     order: unset;
     -webkit-order: unset; }
   .landing__service .service__icon {
-    text-align: left; } }
+    text-align: left;
+    margin-left: 0px; }
+
+  .landing__contact .contact__headline {
+    font-size: 5.9375rem;
+    line-height: 5.7rem;
+    margin-bottom: 60px; }
+  .landing__contact .contact__form {
+    margin-top: 0px; } }
 @media (min-width: 1200px) {
   main.main--space-top {
     padding-top: 150px; }
@@ -636,6 +684,9 @@ footer {
     height: 30rem; }
 
   .testimonial .testimonial__card {
-    height: 434px; } }
+    height: 434px; }
+
+  .landing__contact {
+    padding-top: 150px; } }
 
 /*# sourceMappingURL=fivestar_style.css.map */

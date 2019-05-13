@@ -25,7 +25,7 @@
             <a class="nav-link nav__list__link" href="galleries.php">Galleries</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav__list__link" href="#">Contact</a>
+            <a class="nav-link nav__list__link" href="contact.php">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav__list__link" href="#"><i class="fab fa-facebook-square"></i></a>

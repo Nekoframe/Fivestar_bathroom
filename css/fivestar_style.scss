@@ -4,6 +4,7 @@ $header_light: #ffffff;
 $header_dark: #281a17;
 $paragraph_header: rgba(40,26,23,0.8);
 $paragraph_title: rgba(40,26,23,1);
+$paragraph_light: #ffffff;
 $btn_dark: #3c5f8f;
 $btn_dark_hover: #ffffff;
 $btn_light: #ffffff;
@@ -19,6 +20,9 @@ $nav_top: #ffffff;
 $landing_header: #3c5f8f;
 $service_icon: #3c5f8f;
 $service_border: #3c5f8f;
+$contact_bg: #496480;
+$contact_link: #ffffff;
+$contact_link_hover: rgba(255,255,255,0.6);
 
 
 body{
@@ -347,7 +351,7 @@ footer{
 
 
 .testimonial{
-	height: 100vh;
+	height: auto;
 	padding-top: 80px;
 	padding-bottom: 80px;
 	background-image: url('../img/testimonial_bg2.jpg');
@@ -758,7 +762,9 @@ footer{
 
 	.service__icon{
 		margin-top: 3rem;
-		text-align: center;
+		text-align: left;
+		margin-left: 5rem;
+		
 		.icon{
 			display: inline-block;
 			width: 60px;
@@ -812,6 +818,59 @@ footer{
 }
 
 
+.landing__contact{
+	background-color: $contact_bg;
+	padding-top: 100px;
+	color: $paragraph_light;
+
+	.contact__headline{
+		font-size: 3.9375rem;
+		font-weight: bold;
+		line-height: 4rem;
+		margin-bottom: 60px;
+	}
+
+	address{
+	    margin-top: 0.5rem;
+    	margin-bottom: 2rem;
+	}
+
+	p{
+		margin-bottom: 0.5rem;
+		a{
+			color: $contact_link;
+			text-decoration: none;
+
+			&:hover{
+				color: $contact_link_hover;
+			}
+		}
+	}
+
+	.contact__form{
+		margin-bottom: 40px;
+		margin-top: 40px;
+	}
+
+	.contact__captcha{
+		height: 140px;
+
+		.captcha{
+			float: right;
+			margin-top: 37px;
+		}
+	}
+
+	hr{
+		border-top: solid 1px #ffffff;
+	}
+
+	.contact__button{
+		text-align: right;
+	}
+}
+
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
@@ -845,6 +904,15 @@ footer{
 	.testimonial{
 		.testimonial__card{
 			height: 460px;
+		}
+	}
+
+	// landing contact
+	.landing__contact{
+		.contact__headline{
+			font-size: 5.9375rem;
+			line-height: 5.7rem;
+			margin-bottom: 60px;
 		}
 	}
 }
@@ -897,6 +965,8 @@ footer{
 	}
 
 	.testimonial{
+		height: 100vh;
+
 		.testimonial__card{
 			height: 510px;
 		}
@@ -937,6 +1007,20 @@ footer{
 
 		.service__icon{
 			text-align: left;
+			margin-left: 0px;
+		}
+	}
+
+	// landing contact
+	.landing__contact{
+		.contact__headline{
+			font-size: 5.9375rem;
+			line-height: 5.7rem;
+			margin-bottom: 60px;
+		}
+
+		.contact__form{
+			margin-top: 0px;
 		}
 	}
 }
@@ -965,5 +1049,10 @@ footer{
 		.testimonial__card{
 			height: 434px;
 		}
+	}
+
+	// landing service
+	.landing__contact{
+		padding-top: 150px;
 	}
 }
