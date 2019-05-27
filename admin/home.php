@@ -17,7 +17,7 @@
 		<div class="admin__banner">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
+					<div class="col-lg-12" id="banner">
 						<div class="admin__strip-title">Banner</div>
 					</div>
 				</div>
@@ -67,7 +67,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="admin__strip-title">Contact</div>
+						<div class="admin__strip-title" id="contact">Contact</div>
 					</div>
 				</div>
 				<div class="row">
@@ -112,7 +112,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="admin__strip-title">Services</div>
+						<div class="admin__strip-title" id="service">Services</div>
 					</div>
 				</div>
 
@@ -193,7 +193,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="admin__strip-title">Ratings and Reviews</div>
+						<div class="admin__strip-title" id="rating">Ratings and Reviews</div>
 					</div>
 				</div>
 				<div class="row">
@@ -350,7 +350,7 @@ amet,
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="admin__strip-title">Gallery</div>
+						<div class="admin__strip-title" id="gallery">Gallery</div>
 					</div>
 				</div>
 				<div class="row">

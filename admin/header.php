@@ -16,19 +16,25 @@
       <div class="collapse navbar-collapse mobile__menu-box" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto nav__list">
           <li class="nav-item active">
-            <a class="nav-link nav__list__link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link nav__list__link" href="#banner">Banner <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav__list__link" href="services.php">Services</a>
+            <a class="nav-link nav__list__link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav__list__link" href="galleries.php">Galleries</a>
+            <a class="nav-link nav__list__link" href="#service">Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav__list__link" href="contact.php">Contact</a>
+            <a class="nav-link nav__list__link" href="#rating">Rating &amp; Review</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav__list__link" href="#"><i class="fab fa-facebook-square"></i></a>
+            <a class="nav-link nav__list__link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav__list__link" href="#">
+              <!-- <button class="btn btn--auto-size btn--dark-transparent btn--admin">Log out</button> -->
+              [ Log out ]
+            </a>
           </li>
         </ul>
         
