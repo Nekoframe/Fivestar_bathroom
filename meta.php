@@ -11,6 +11,16 @@
 
     <title><?php echo $title; ?></title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133919197-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133919197-1');
+    </script>
+
     <!-- Google recaptcha -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <script type="text/javascript">

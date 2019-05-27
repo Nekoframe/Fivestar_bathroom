@@ -31,6 +31,8 @@ $login_link: #ffffff;
 $login_link_hover: rgba(255,255,255,0.6);
 $upload_btn_hover: #688fb7;
 $table_head: #496480;
+$footer_link: #3c5f8f;
+$footer_link_hover: #ffffff;
 
 
 body{
@@ -273,12 +275,23 @@ footer{
 	.footer__copyright{
 		color: $copyright;
 		margin: 0px;
+		transition: all 0.5s ease;
+		
+		a{
+			color: $footer_link;
+			transition: all 0.5s ease;
+
+			&:hover{
+				color: $footer_link_hover;
+				text-decoration: none;
+			}
+		}
 	}
 }
 
 // login page
 .login__section{
-	height: calc(100vh - 109px);
+	height: calc(100vh - 133px);
 	
 	position: relative;
 

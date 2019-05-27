@@ -3,6 +3,7 @@
 </div>
 <footer>
 	<p class="footer__copyright">Copyright <i class="far fa-copyright"></i> 2019 Five Star Bathroom.</p>
+	<p class="footer__copyright">Designed by <a href="http://zbframe.com" target="_blank">ZBframe</a>.</p>
 </footer>
 
 
