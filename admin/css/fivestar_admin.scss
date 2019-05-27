@@ -1,0 +1,763 @@
+// @import url('bootstrap.scss');
+$banner_text: #ffffff;
+$header_light: #ffffff;
+$header_dark: #281a17;
+$paragraph_header: rgba(40,26,23,0.8);
+$paragraph_title: rgba(40,26,23,1);
+$paragraph_light: #ffffff;
+$btn_dark: #3c5f8f;
+$btn_dark_hover: #ffffff;
+$btn_light: #ffffff;
+$btn_light_hover: #3c5f8f;
+$bg_dark: #3c5f8f;
+$card_bg: #ffffff;
+$star: #3c5f8f;
+$dot: #ffffff;
+$dot_hover: #3c5f8f;
+$footer_bg: #2f2b2c;
+$copyright: #ffffff;
+$nav_top: #ffffff;
+$landing_header: #3c5f8f;
+$service_icon: #3c5f8f;
+$service_border: #3c5f8f;
+$contact_bg: #496480;
+$contact_link: #ffffff;
+$contact_link_hover: rgba(255,255,255,0.6);
+
+// admin
+$login_bg_header: #496480;
+$login_bg: #688fb7;
+$login_link: #ffffff;
+$login_link_hover: rgba(255,255,255,0.6);
+$upload_btn_hover: #688fb7;
+$table_head: #496480;
+
+
+body{
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	font-size: 16px;
+	color: rgba(40,26,23,0.6);
+}
+
+button{
+	&:focus{
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+
+a{
+	text-decoration: none;
+}
+
+// Mixins
+@mixin border-radii($topleft, $topright, $bottomright, $bottomleft) {
+	border-top-left-radius: $topleft;
+	border-top-right-radius: $topright;
+	border-bottom-right-radius: $bottomright;
+	border-bottom-left-radius: $bottomleft;
+	-webkit-border-top-left-radius: $topleft;
+	-webkit-border-top-right-radius: $topright;
+	-webkit-border-bottom-right-radius: $bottomright;
+	-webkit-border-bottom-left-radius: $bottomleft;
+	-moz-border-radius-topleft: $topleft;
+	-moz-border-radius-topright: $topright;
+	-moz-border-radius-bottomright: $bottomright;
+	-moz-border-radius-bottomleft: $bottomleft;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// buttons
+.btn--light-transparent{
+	@include border-radii(10px, 0px, 10px, 0px);
+	border: solid 3px $btn_light;
+	color: $btn_light;
+
+	&:hover, &.active{
+		background-color: $btn_light;
+		color: $btn_light_hover;
+	}
+
+	&:focus{
+		outline: none;
+	}
+}
+
+.btn--dark-transparent{
+	border: solid 3px $btn_dark;
+	color: $btn_dark;
+
+	&:hover, &.active{
+		background-color: $btn_dark;
+		color: $btn_dark_hover;
+	}
+
+	&:focus{
+		outline: none;
+	}
+}
+
+.btn--fixed-size{
+	width: 160px;
+	height: 46px;
+	text-transform: uppercase;
+	@include border-radii(10px, 0px, 10px, 0px);
+}
+
+.btn--auto-size{
+
+}
+
+// file upload button
+.btn--file{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	
+}
+
+.btn--file + label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $btn_light;;
+    background-color: $bg_dark;
+    display: inline-block;
+    padding: .375rem 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn--file:focus + label,
+.btn--file + label:hover {
+    background-color: $upload_btn_hover;
+}
+
+.btn--admin{
+	text-transform: capitalize;
+}
+
+
+
+
+
+
+// header
+header{
+	z-index: 5;
+	position: absolute;
+	width: 100%;
+
+	nav.navbar{
+		padding: .5rem 0rem;
+		.nav__brand{
+			color: $header_light;
+		}
+
+		.nav__list{
+			.nav__list__link{
+				color: $header_light;
+				text-transform: uppercase;
+				font-size: 1.2rem;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				transition: all 0.3s ease;
+
+				&.hover{
+					opacity: 1;
+				}
+
+				&.not--hover{
+					opacity: 0.3;
+				}
+			}
+
+			.nav-item{
+				&:last-child{
+					.nav__list__link{
+						padding-right: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	.mobile__menu-button{
+		padding: 0.25rem 0rem;
+
+		.icon{
+			color: $header_light;
+		}
+	}
+
+	.mobile__menu-box{
+		background-color: rgba(0, 0, 0, 1);
+
+		.nav__list{
+			.nav__list__link{
+				color: $header_light;
+			}
+		}
+	}
+
+	&.header--dark{
+		nav.navbar{
+			.nav__brand{
+				color: $header_dark;
+			}
+		}
+
+		.mobile__menu-button{
+			.icon{
+				color: $header_dark;
+			}
+		}
+	}
+}
+
+// main
+main{
+	&.main--space-top{
+		padding-top: 100px;
+	}
+}
+
+
+// footer
+.nav--top{
+	width: 60px;
+	height: 60px;
+	background-color: $footer_bg;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10;
+	opacity: 0;
+	transition: all 0.3s ease;
+
+	&.active{
+		opacity: 1;
+	}
+
+	.nav--top__link{
+		width: 100%;
+		height: 100%;
+		color: $nav_top;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    text-decoration: none;
+	}
+}
+
+footer{
+	padding-top: 48px;
+	padding-bottom: 37px;
+	background-color: $footer_bg;
+	text-align: center;
+
+	.footer__copyright{
+		color: $copyright;
+		margin: 0px;
+	}
+}
+
+// login page
+.login__section{
+	height: calc(100vh - 109px);
+	
+	position: relative;
+
+	.login__box{
+		width: 350px;
+		vertical-align: middle;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    color: $paragraph_light;
+
+	}
+
+	.login__box__header{
+		@include border-radii(10px, 0px, 0px, 0px);
+		border: solid 3px $login_bg_header;
+		padding: 20px;
+		background-color: $login_bg_header;
+
+		img{
+			width: 160px;
+		    margin: 0 auto;
+		    display: block;
+		}
+	}
+
+	.login__form{
+		@include border-radii(0px, 0px, 10px, 0px);
+		border: solid 3px $login_bg_header;
+		padding: 20px;
+		background-color: $login_bg;
+	}
+
+	.login__button{
+		text-align: center;
+	}
+
+	.login__link{
+		color: $login_link;
+		text-decoration: none;
+		transition: all 0.3s ease;
+
+		&:hover{
+			color: $login_link_hover;
+		}
+	}
+
+	.forgot-password__box{
+		text-align: center;
+
+		.forgot-password{
+
+		}
+
+		.forgot-password__title{
+
+		}
+
+		.forgot-password__detail{
+			display: block;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.admin__wrapper{
+	.admin__strip-title{
+		background-color: $login_bg;
+		padding: 10px;
+		color: $paragraph_light;
+		font-size: 1.5rem;
+		width: 100%;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.plus__button__box{
+		text-align: center;
+	}
+
+	.button__box{
+		text-align: center;
+		margin-top: 20px;
+	}
+
+
+	.save__button__box{
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	form{
+		label{
+			font-weight: bold;
+		}
+	}
+
+	textarea{
+		display: block;
+	    width: 100%;
+	    padding: .375rem .75rem;
+	    font-size: 1rem;
+	    font-weight: 400;
+	    line-height: 1.5;
+	    color: #495057;
+	    background-color: #fff;
+	    background-clip: padding-box;
+	    border: 1px solid #ced4da;
+	    border-radius: .25rem;
+	    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	    resize: none;
+	}
+
+	.form-check-input{
+		width: 20px;
+		height: 20px;
+	}
+
+	.sub__title{
+		margin-bottom: 20px;
+		display: block;
+	}
+}
+
+.admin__banner{
+
+	.admin__strip-title{
+		margin-top: 0px;
+	}
+
+	.banner__example{
+		width: 100%;
+		height: 300px;
+		background-image: url('../../img/banner.jpg');
+		background-size: cover !important;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		position: relative;
+		margin-bottom: 50px;
+
+		.banner--overlay{
+			// width: calc(100% - 30px);
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+			position: absolute;
+		    // left: 15px;
+		    left: 0px;
+    		top: 0px;
+    		z-index: 2;
+		}
+	}
+
+	.banner__text{
+		z-index: 3;
+		color: $banner_text;
+		vertical-align: middle;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+		h3{
+			font-size: 1rem;
+		}
+
+		h1{
+			font-size: 2.938rem;
+		}
+	}
+
+	.banner__text__edit{
+		margin-top: 20px;
+	}
+}
+
+
+.admin__contact{
+	.contact__text__edit{
+
+	}
+}
+
+
+.admin__service{
+
+	.service__box{
+		margin-bottom: 40px;
+	}
+
+	.service__example{
+		margin-bottom: 50px;
+	}
+
+	.service__text__edit{
+		margin-top: 20px;
+	}
+}
+
+.admin__testimonial{
+	.img--fixed{
+		width: 100px;
+		height: 100px;
+	}
+
+	.testimonial__box{
+
+	}
+
+	.testimonial__example{
+		margin-bottom: 50px;
+	}
+
+	.testimonial__text__edit{
+		margin-top: 20px;
+	}
+}
+
+.admin__gallery{
+	.album__text__edit{
+
+	}
+
+	.album__result{
+		margin-top: 20px;
+
+		.album__image{
+			.btn--close{
+				cursor: pointer;
+			    position: absolute;
+			    top: 0px;
+			    right: 0px;
+			    color: #fff;
+			    z-index: 2;
+			}
+		}
+	}
+
+	#album_table_wrapper{
+		margin-bottom: 40px;
+	}
+}
+
+
+
+// Table
+table.admin__table{
+	border-collapse: collapse;
+    border: 2px solid $table_head;
+    font-size: 1rem;
+    margin-bottom: 50px;
+
+	thead,
+	tfoot {
+	    background-color: $table_head;
+	    color: #ffffff;
+	}
+
+	tbody {
+	    background-color: #ffffff;
+	}
+
+	caption {
+	    padding: 10px;
+	    caption-side: bottom;
+	}
+
+	td,
+	th {
+	    border: 1px solid #eeeeee;
+	    padding: 5px 10px;
+	}
+
+	td {
+	    text-align: center;
+	}
+
+	a{
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+
+// datatable
+.dataTables_wrapper{
+	.dataTables_info{
+		float: none;
+		text-align: center;
+	}
+
+	.dataTables_filter{
+		input{
+		    padding: .375rem .75rem;
+		    font-size: 1rem;
+		    font-weight: 400;
+		    line-height: 1.5;
+		    color: #495057;
+		    background-color: #fff;
+		    background-clip: padding-box;
+		    border: 1px solid #ced4da;
+		    border-radius: .25rem;
+		    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+		}
+	}
+
+
+	.dataTables_paginate{
+		
+		.paginate_button{
+
+			&:hover{
+				background: $upload_btn_hover;
+				color: #ffffff !important;
+				border: none;
+			}
+
+			&.disabled{
+				color: #e7e7e7 !important;
+
+				&:hover{
+					color: #e7e7e7 !important;
+				}
+			}
+
+			&.current{
+				background: $table_head;
+				color: #ffffff !important;
+				&:hover{
+					background: $upload_btn_hover;
+					color: #ffffff !important;
+					border: none;
+				}
+			}
+		}
+	}
+
+}
+
+table.dataTable.no-footer{
+	border: 2px solid $table_head;
+}
+
+// Table for mobile
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	// tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50% !important;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		font-weight: bold;
+	}
+
+	table{
+		&#testimonial_table{
+			td{
+				&:nth-of-type(1):before { content: "#"; }
+				&:nth-of-type(2):before { content: "Name"; }
+				&:nth-of-type(3):before { content: "Last name"; }
+				&:nth-of-type(4):before { content: "Photo"; }
+				&:nth-of-type(5):before { content: "Location"; }
+				&:nth-of-type(6):before { content: "Stars"; }
+				&:nth-of-type(7):before { content: "Review"; }
+				&:nth-of-type(8):before { content: "Edit"; }
+				&:nth-of-type(9):before { content: "Delete"; }
+			}
+		}
+
+		&#album_table{
+			td{
+				&:nth-of-type(1):before { content: "#"; }
+				&:nth-of-type(2):before { content: "Name"; }
+				&:nth-of-type(3):before { content: "Location"; }
+				&:nth-of-type(4):before { content: "Category"; }
+				&:nth-of-type(5):before { content: "Edit"; }
+				&:nth-of-type(6):before { content: "Delete"; }
+			}
+		}
+	}
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	header{
+		.mobile__menu-box{
+			background-color: transparent;
+		}
+
+		nav.navbar{
+			.nav__list{
+				.nav__list__link{
+					color: $header_light;
+				}
+			}
+		}
+
+		&.header--dark{
+			nav.navbar{
+				.nav__list{
+					.nav__list__link{
+						color: $header_dark;
+					}
+				}
+
+				.nav__brand{
+					color: $header_dark;
+				}
+			}
+		}
+	}
+
+
+
+	.admin__banner{
+
+		.banner__example{
+			margin-bottom: 0px;
+		}
+	}
+
+	.admin__service{
+		.service__example{
+			margin-bottom: 0px;
+		}
+	}
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	main{
+		&.main--space-top{
+			padding-top: 150px;
+		}
+	}
+}

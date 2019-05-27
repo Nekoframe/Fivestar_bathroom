@@ -121,12 +121,6 @@ footer {
   footer .footer__copyright {
     color: #ffffff;
     margin: 0px; }
-    footer .footer__copyright a {
-      color: #3c5f8f;
-      transition: all 0.5s ease; }
-      footer .footer__copyright a:hover {
-        color: #ffffff;
-        text-decoration: none; }
 
 .banner {
   background-image: url("../img/banner.jpg");

@@ -2,8 +2,7 @@
 	<a class="nav--top__link" href="#top"><i class="fas fa-chevron-up fa-2x"></i></a>
 </div>
 <footer>
-	<p class="footer__copyright">Copyright <i class="far fa-copyright"></i> 2019 Five Star Bathroom. All rights reserved.</p>
-	<p class="footer__copyright">Designed by <a href="http://zbframe.com" target="_blank">ZBframe</a>.</p>
+	<p class="footer__copyright">Copyright <i class="far fa-copyright"></i> 2019 Five Star Bathroom.</p>
 </footer>
 
 

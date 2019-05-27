@@ -23,8 +23,6 @@ $service_border: #3c5f8f;
 $contact_bg: #496480;
 $contact_link: #ffffff;
 $contact_link_hover: rgba(255,255,255,0.6);
-$footer_link: #3c5f8f;
-$footer_link_hover: #ffffff;
 
 
 body{
@@ -230,16 +228,6 @@ footer{
 	.footer__copyright{
 		color: $copyright;
 		margin: 0px;
-
-		a{
-			color: $footer_link;
-			transition: all 0.5s ease;
-
-			&:hover{
-				color: $footer_link_hover;
-				text-decoration: none;
-			}
-		}
 	}
 }
 
