@@ -33,6 +33,8 @@ $upload_btn_hover: #688fb7;
 $table_head: #496480;
 $footer_link: #3c5f8f;
 $footer_link_hover: #ffffff;
+$table_link: #688fb7;
+$table_link_hover: #496480;
 
 
 body{
@@ -406,6 +408,13 @@ footer{
 	    resize: none;
 	}
 
+	input{
+		&.btn__publish{
+			width: 20px;
+			height: 20px;
+		}
+	}
+
 	.form-check-input{
 		width: 20px;
 		height: 20px;
@@ -508,6 +517,13 @@ footer{
 	.testimonial__text__edit{
 		margin-top: 20px;
 	}
+
+	.review__detail{
+		white-space: nowrap; 
+		width: 200px;
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	}
 }
 
 .admin__gallery{
@@ -571,7 +587,9 @@ table.admin__table{
 
 	a{
 		text-decoration: none;
+		color: $table_link;
 		&:hover{
+			color: $table_link_hover;
 			text-decoration: none;
 		}
 	}
@@ -633,8 +651,23 @@ table.admin__table{
 
 }
 
-table.dataTable.no-footer{
+/*table.dataTable.no-footer{
 	border: 2px solid $table_head;
+}*/
+
+
+table.dataTable{
+
+	&.no-footer{
+		border: none;
+	}
+
+	 tbody{
+	 	tr{
+	 		border: 2px solid $table_head;
+	 		margin-bottom: 20px;
+	 	}
+	 }
 }
 
 // Table for mobile
@@ -686,8 +719,9 @@ only screen and (max-width: 760px),
 				&:nth-of-type(5):before { content: "Location"; }
 				&:nth-of-type(6):before { content: "Stars"; }
 				&:nth-of-type(7):before { content: "Review"; }
-				&:nth-of-type(8):before { content: "Edit"; }
-				&:nth-of-type(9):before { content: "Delete"; }
+				&:nth-of-type(8):before { content: "Publish"; }
+				&:nth-of-type(9):before { content: "Edit"; }
+				&:nth-of-type(10):before { content: "Delete"; }
 			}
 		}
 
@@ -697,8 +731,9 @@ only screen and (max-width: 760px),
 				&:nth-of-type(2):before { content: "Name"; }
 				&:nth-of-type(3):before { content: "Location"; }
 				&:nth-of-type(4):before { content: "Category"; }
-				&:nth-of-type(5):before { content: "Edit"; }
-				&:nth-of-type(6):before { content: "Delete"; }
+				&:nth-of-type(5):before { content: "Publish"; }
+				&:nth-of-type(6):before { content: "Edit"; }
+				&:nth-of-type(7):before { content: "Delete"; }
 			}
 		}
 	}
@@ -772,5 +807,24 @@ only screen and (max-width: 760px),
 		&.main--space-top{
 			padding-top: 150px;
 		}
+	}
+
+	table.dataTable{
+		&.no-footer{
+			border: 2px solid $table_head;
+		}
+
+		thead, tfoot{
+			th{
+				border-bottom: none;
+			}
+		}
+
+		tbody{
+		 	tr{
+		 		border: 2px solid $table_head;
+		 		margin-bottom: 0px;
+		 	}
+		 }
 	}
 }

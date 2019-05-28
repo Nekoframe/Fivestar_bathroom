@@ -208,6 +208,7 @@
 						            <th scope="col">Location</th>
 						            <th scope="col">Stars</th>
 						            <th scope="col">Reviews</th>
+						            <th scope="col">Publish</th>
 						            <th scope="col">Edit</th>
 						            <th scope="col">Delete</th>
 						        </tr>
@@ -221,6 +222,7 @@
 						            <td>Lincoln</td>
 						            <td>4.5</td>
 						            <td>
+						            	<div class="review__detail">
 						Sed ut perspiciatis unde omnis iste natus 
 error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam,
@@ -233,7 +235,11 @@ dolores eos qui ratione voluptatem
 sequi nesciunt. Neque porro quisquam
 est, qui dolorem ipsum quia dolor sit
 amet,
-					</td>
+						            	</div>
+									</td>
+									<td>
+						            	<input type="checkbox" class="btn__publish" name="testimonial__public">
+						            </td>
 									<td>
 										<button class="btn btn--auto-size btn--dark-transparent btn--admin">Edit</button>
 									</td>
@@ -250,6 +256,7 @@ amet,
 						            <td>London</td>
 						            <td>4</td>
 						            <td>
+						            	<div class="review__detail">
 						Sed ut perspiciatis unde omnis iste natus 
 error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam,
@@ -262,7 +269,11 @@ dolores eos qui ratione voluptatem
 sequi nesciunt. Neque porro quisquam
 est, qui dolorem ipsum quia dolor sit
 amet,
-					</td>
+						            	</div>
+									</td>
+									<td>
+						            	<input type="checkbox" class="btn__publish" name="testimonial__public">
+						            </td>
 									<td>
 										<button class="btn btn--auto-size btn--dark-transparent btn--admin">Edit</button>
 									</td>
@@ -444,6 +455,7 @@ amet,
 						            <th scope="col">Location</th>
 						            <th scope="col">Category</th>
 						            <th scope="col">Date created</th>
+						            <th scope="col">Publish</th>
 						            <th scope="col">Edit</th>
 						            <th scope="col">Delete</th>
 						        </tr>
@@ -455,6 +467,9 @@ amet,
 						            <td>Lincoln</td>
 						            <td><p>Minimal</p> <p>Cozy Bathrooms</p></td>
 						            <td>16/05/2019 16:00</td>
+						            <td>
+						            	<input type="checkbox" class="btn__publish" name="album__public">
+						            </td>
 									<td>
 										<button class="btn btn--auto-size btn--dark-transparent btn--admin">Edit</button>
 									</td>
@@ -468,6 +483,9 @@ amet,
 						            <td>Lincoln</td>
 						            <td><p>Minimal</p> <p>Cozy Bathrooms</p></td>
 						            <td>16/05/2019 16:00</td>
+						            <td>
+						            	<input type="checkbox" class="btn__publish" name="album__public">
+						            </td>
 									<td>
 										<button class="btn btn--auto-size btn--dark-transparent btn--admin">Edit</button>
 									</td>
@@ -481,6 +499,9 @@ amet,
 						            <td>Lincoln</td>
 						            <td><p>Minimal</p> <p>Cozy Bathrooms</p></td>
 						            <td>16/05/2019 16:00</td>
+						            <td>
+						            	<input type="checkbox" class="btn__publish" name="album__public">
+						            </td>
 									<td>
 										<button class="btn btn--auto-size btn--dark-transparent btn--admin">Edit</button>
 									</td>
